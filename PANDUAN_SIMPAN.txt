@@ -1,0 +1,5 @@
+PANDUAN MENYIMPAN DAN MEMBUKA WEBSITE:
+1. Buat folder baru di komputer Anda (misal: "website-es-segar").
+2. Letakkan file "index.html", "style.css", dan "script.js" di dalam folder tersebut.
+3. Buat folder baru bernama "img/" di samping file-file tersebut untuk meletakkan foto produk minuman es.
+4. Klik dua kali pada "index.html" untuk langsung membuka website di Google Chrome / Edge / Firefox tanpa perlu install aplikasi apa pun!

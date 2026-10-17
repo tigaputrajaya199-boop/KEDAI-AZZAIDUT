@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Es Segar Nusantara UMKM - Kesegaran Alami Buah & Santan Murni — Dingin Manis Pelepas Dahaga!</title>
+  <meta name="description" content="Kedai minuman es tradisional & kekinian dengan buah segar pilihan, santan kelapa murni, gula aren asli, dan sirup resep keluarga tanpa pemanis buatan.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ==================== HEADER & NAVIGASI ==================== -->
+  <header class="header-utama">
+    <div class="wadah header-konten">
+      <a href="#beranda" class="logo-usaha">
+        <span class="ikon-api">🍧</span>
+        <span class="nama-merek">Es Segar Nusantara UMKM</span>
+      </a>
+
+      <!-- Tombol Hamburger untuk HP (360px) -->
+      <button id="tombol-menu-hp" class="tombol-hamburger" aria-label="Buka Menu Navigasi">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Menu Navigasi -->
+      <nav id="nav-menu" class="navigasi">
+        <ul class="daftar-menu">
+          <li><a href="#beranda" class="tautan-menu aktif">Beranda</a></li>
+          <li><a href="#menu" class="tautan-menu">Menu Minuman</a></li>
+          <li><a href="#keunggulan" class="tautan-menu">Keunggulan</a></li>
+          <li><a href="#kontak" class="tautan-menu">Lokasi & Kontak</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-cta">
+        <a id="tombol-wa-header" href="#" class="tombol-primer">
+          Chat WhatsApp
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==================== BAGIAN BERANDA (HERO) ==================== -->
+    <section id="beranda" class="bagian-hero">
+      <div class="wadah hero-konten">
+        <div class="hero-teks">
+          <div class="sub-judul-kicker">
+            <span class="titik-segar"></span>
+            Aneka Minuman Es Nusantara Asli
+          </div>
+          <h1 class="hero-judul">Kesegaran Alami Buah & Santan Murni — Dingin Manis Pelepas Dahaga!</h1>
+          <p class="hero-deskripsi">Kedai minuman es tradisional & kekinian dengan buah segar pilihan, santan kelapa murni, gula aren asli, dan sirup resep keluarga tanpa pemanis buatan.</p>
+          
+          <div class="hero-aksi">
+            <a href="#menu" class="tombol-primer">Lihat Daftar Minuman Es</a>
+            <a id="tombol-wa-hero" href="#" class="tombol-sekunder">Order Dingin via WA</a>
+          </div>
+
+          <!-- Ringkasan Nilai Keunggulan -->
+          <div class="ringkasan-poin">
+            <div class="poin-item">
+              <span class="poin-angka">100%</span>
+              <span class="poin-label">Buah Asli & Gula Alami</span>
+            </div>
+            <div class="poin-pembagi"></div>
+            <div class="poin-item">
+              <span class="poin-angka">Dingin</span>
+              <span class="poin-label">Es Kristal Higienis</span>
+            </div>
+            <div class="poin-pembagi"></div>
+            <div class="poin-item">
+              <span class="poin-angka">Sealed</span>
+              <span class="poin-label">Cup Anti Tumpah</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="kartu-hero-gambar">
+            <img src="img/es-hero.jpg" alt="Sajian Es Teler Durian Segar Dingin" class="hero-img-utama" onerror="this.src='https://placehold.co/800x600/0284c7/ffffff?text=Es+Segar+Nusantara'">
+            <div class="lencana-melayang">
+              <span class="bintang">⭐ 4.9/5.0</span>
+              <span class="teks-ulasan">Segar & Manis Alami</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== BAGIAN KEUNGGULAN ==================== -->
+    <section id="keunggulan" class="bagian-keunggulan">
+      <div class="wadah">
+        <div class="judul-bagian">
+          <h2>Mengapa Minuman Es Kami Jadi Favorit?</h2>
+          <p>Kualitas bahan segar alami, santan kelapa murni, dan kebersihan yang selalu terjaga</p>
+        </div>
+
+        <div class="kisi-keunggulan">
+          <div class="kartu-keunggulan">
+            <div class="ikon-keunggulan">🥥</div>
+            <h3>Santan Kelapa Murni</h3>
+            <p>Diperas segar setiap hari dari kelapa pilihan, menghasilkan kuah es yang gurih alami tanpa santan bubuk instan.</p>
+          </div>
+          <div class="kartu-keunggulan">
+            <div class="ikon-keunggulan">🥑</div>
+            <h3>Buah Segar Pilihan</h3>
+            <p>Alpukat mentega matang pohon, nangka madu harum, dan daging durian medan asli yang manis legit melimpah.</p>
+          </div>
+          <div class="kartu-keunggulan">
+            <div class="ikon-keunggulan">🧊</div>
+            <h3>Es Kristal RO Bersih</h3>
+            <p>Hanya menggunakan es batu kristal higienis bersertifikat pangan, aman dan menyegarkan sampai tetes terakhir.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== BAGIAN KATALOG MENU ES ==================== -->
+    <section id="menu" class="bagian-produk">
+      <div class="wadah">
+        <div class="judul-bagian">
+          <h2>Menu Minuman Es Pilihan & Harga</h2>
+          <p>Pilih minuman es favoritmu dan pesan langsung ke WhatsApp admin secara instan</p>
+        </div>
+
+        <!-- Tata letak kartu produk responsif: 3 kolom di laptop, 2 di tablet, 1 di HP 360px -->
+        <div class="kisi-produk">
+        <!-- Kartu Minuman Es: Es Teler Durian Sultan -->
+        <article class="kartu-produk" data-id="prod-1" data-nama="Es Teler Durian Sultan" data-harga="24000">
+          <div class="wadah-foto">
+            <img src="img/es-teler-durian.jpg" alt="Foto Es Teler Durian Sultan segar" loading="lazy" onerror="this.src='https://placehold.co/600x450/e0f2fe/0284c7?text=Es%20Teler%20Durian%20Sultan'">
+            <span class="lencana-favorit">Paling Laris</span>
+          </div>
+          <div class="konten-produk">
+            <div class="header-produk">
+              <h3 class="nama-produk">Es Teler Durian Sultan</h3>
+              <span class="berat-produk">Cup Jumbo 500 ml</span>
+            </div>
+            <p class="deskripsi-produk">Paduan daging durian asli medan manis legit, potongan alpukat mentega, kelapa muda serut, nangka wangi, kuah santan kental gurih, dan sirup krimer kental manis.</p>
+            <div class="bawah-produk">
+              <span class="harga-produk">Rp 24.000</span>
+              <button class="tombol-pesan" onclick="pesanProduk('Es Teler Durian Sultan', 24000)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                Pesan via WA
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Kartu Minuman Es: Es Cendol Nangka Gula Aren -->
+        <article class="kartu-produk" data-id="prod-2" data-nama="Es Cendol Nangka Gula Aren" data-harga="15000">
+          <div class="wadah-foto">
+            <img src="img/es-cendol-nangka.jpg" alt="Foto Es Cendol Nangka Gula Aren segar" loading="lazy" onerror="this.src='https://placehold.co/600x450/e0f2fe/0284c7?text=Es%20Cendol%20Nangka%20Gula%20Aren'">
+            <span class="lencana-favorit">Paling Laris</span>
+          </div>
+          <div class="konten-produk">
+            <div class="header-produk">
+              <h3 class="nama-produk">Es Cendol Nangka Gula Aren</h3>
+              <span class="berat-produk">Cup 450 ml</span>
+            </div>
+            <p class="deskripsi-produk">Cendol beras pandan suji kenyal alami, nangka madu wangi, santan peras kelapa segar gurih, disiram kentalnya juruh gula aren asli pekat wangi.</p>
+            <div class="bawah-produk">
+              <span class="harga-produk">Rp 15.000</span>
+              <button class="tombol-pesan" onclick="pesanProduk('Es Cendol Nangka Gula Aren', 15000)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                Pesan via WA
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Kartu Minuman Es: Es Campur Pelangi Segar -->
+        <article class="kartu-produk" data-id="prod-3" data-nama="Es Campur Pelangi Segar" data-harga="18000">
+          <div class="wadah-foto">
+            <img src="img/es-campur-pelangi.jpg" alt="Foto Es Campur Pelangi Segar segar" loading="lazy" onerror="this.src='https://placehold.co/600x450/e0f2fe/0284c7?text=Es%20Campur%20Pelangi%20Segar'">
+            
+          </div>
+          <div class="konten-produk">
+            <div class="header-produk">
+              <h3 class="nama-produk">Es Campur Pelangi Segar</h3>
+              <span class="berat-produk">Cup 500 ml</span>
+            </div>
+            <p class="deskripsi-produk">Isian komplit menyegarkan: cincau hitam kenyal, kolang-kaling manis, tape singkong manis, alpukat, nata de coco, disiram sirup mawar merah harum & es serut halus.</p>
+            <div class="bawah-produk">
+              <span class="harga-produk">Rp 18.000</span>
+              <button class="tombol-pesan" onclick="pesanProduk('Es Campur Pelangi Segar', 18000)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                Pesan via WA
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Kartu Minuman Es: Es Kelapa Muda Jeruk Peras -->
+        <article class="kartu-produk" data-id="prod-4" data-nama="Es Kelapa Muda Jeruk Peras" data-harga="16000">
+          <div class="wadah-foto">
+            <img src="img/es-kelapa-jeruk.jpg" alt="Foto Es Kelapa Muda Jeruk Peras segar" loading="lazy" onerror="this.src='https://placehold.co/600x450/e0f2fe/0284c7?text=Es%20Kelapa%20Muda%20Jeruk%20Peras'">
+            <span class="lencana-favorit">Paling Laris</span>
+          </div>
+          <div class="konten-produk">
+            <div class="header-produk">
+              <h3 class="nama-produk">Es Kelapa Muda Jeruk Peras</h3>
+              <span class="berat-produk">Cup 450 ml</span>
+            </div>
+            <p class="deskripsi-produk">Daging kelapa muda murni segar dan air kelapa asli berpadu dengan sari jeruk peras segar alami. Tanpa pemanis buatan, sangat menyegarkan di cuaca panas.</p>
+            <div class="bawah-produk">
+              <span class="harga-produk">Rp 16.000</span>
+              <button class="tombol-pesan" onclick="pesanProduk('Es Kelapa Muda Jeruk Peras', 16000)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                Pesan via WA
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Kartu Minuman Es: Es Lumut Stroberi Cheese Foam -->
+        <article class="kartu-produk" data-id="prod-5" data-nama="Es Lumut Stroberi Cheese Foam" data-harga="17000">
+          <div class="wadah-foto">
+            <img src="img/es-lumut-stroberi.jpg" alt="Foto Es Lumut Stroberi Cheese Foam segar" loading="lazy" onerror="this.src='https://placehold.co/600x450/e0f2fe/0284c7?text=Es%20Lumut%20Stroberi%20Cheese%20Foam'">
+            
+          </div>
+          <div class="konten-produk">
+            <div class="header-produk">
+              <h3 class="nama-produk">Es Lumut Stroberi Cheese Foam</h3>
+              <span class="berat-produk">Cup 400 ml</span>
+            </div>
+            <p class="deskripsi-produk">Jelly lumut stroberi kenyal lembut khas viral, dipadu susu evaporated gurih creamy, dan topping keju parut atau cheese foam lembut manis asin nagih.</p>
+            <div class="bawah-produk">
+              <span class="harga-produk">Rp 17.000</span>
+              <button class="tombol-pesan" onclick="pesanProduk('Es Lumut Stroberi Cheese Foam', 17000)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                Pesan via WA
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Kartu Minuman Es: Paket Bundling Segar Ber-4 -->
+        <article class="kartu-produk" data-id="prod-6" data-nama="Paket Bundling Segar Ber-4" data-harga="68000">
+          <div class="wadah-foto">
+            <img src="img/paket-es-bundling.jpg" alt="Foto Paket Bundling Segar Ber-4 segar" loading="lazy" onerror="this.src='https://placehold.co/600x450/e0f2fe/0284c7?text=Paket%20Bundling%20Segar%20Ber-4'">
+            <span class="lencana-favorit">Paling Laris</span>
+          </div>
+          <div class="konten-produk">
+            <div class="header-produk">
+              <h3 class="nama-produk">Paket Bundling Segar Ber-4</h3>
+              <span class="berat-produk">4 Cup Jumbo + Ekstra Topping</span>
+            </div>
+            <p class="deskripsi-produk">Paket hemat kumpul keluarga atau teman kantor: 2 Es Teler Durian + 2 Es Cendol Nangka + ekstra jelly nata de coco. Lengkap dengan sedotan boba & cup seal anti tumpah!</p>
+            <div class="bawah-produk">
+              <span class="harga-produk">Rp 68.000</span>
+              <button class="tombol-pesan" onclick="pesanProduk('Paket Bundling Segar Ber-4', 68000)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                Pesan via WA
+              </button>
+            </div>
+          </div>
+        </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== BAGIAN KONTAK, ALAMAT & JAM BUKA ==================== -->
+    <section id="kontak" class="bagian-kontak">
+      <div class="wadah">
+        <div class="judul-bagian">
+          <h2>Lokasi Kedai & Jam Operasional</h2>
+          <p>Kunjungi kedai kami atau pesan antar minuman dingin langsung ke rumah / kantor</p>
+        </div>
+
+        <div class="konten-kontak-grid">
+          <div class="kartu-info-kontak">
+            <div class="item-info">
+              <div class="ikon-info">📍</div>
+              <div>
+                <h4>Alamat Kedai</h4>
+                <p id="teks-alamat">Jl. Cihampelas No. 88, Coblong, Kota Bandung, Jawa Barat 40131 (Kedai Minuman Es Segar)</p>
+                <a href="https://maps.google.com/?q=Bandung+Minuman+Es+Segar" target="_blank" rel="noopener noreferrer" class="tautan-peta">Buka Petunjuk di Google Maps &rarr;</a>
+              </div>
+            </div>
+
+            <div class="item-info">
+              <div class="ikon-info">⏰</div>
+              <div>
+                <h4>Jam Operasional</h4>
+                <p id="teks-jam-buka">Senin – Minggu: 09.30 – 21.30 WIB</p>
+              </div>
+            </div>
+
+            <div class="item-info">
+              <div class="ikon-info">📱</div>
+              <div>
+                <h4>WhatsApp Resmi</h4>
+                <p id="teks-no-wa">081234567890</p>
+              </div>
+            </div>
+
+            <div class="item-info">
+              <div class="ikon-info">🌐</div>
+              <div>
+                <h4>Media Sosial</h4>
+                <div class="sosmed-links">
+                  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="link-sosmed">Instagram: <strong>@essegar.nusantara</strong></a>
+                  <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="link-sosmed">TikTok: <strong>@essegar_nusantara</strong></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="kartu-peta">
+            <div class="wadah-peta">
+              <!-- Tautan Google Maps interaktif -->
+              <iframe 
+                title="Peta Lokasi Kedai Minuman Es"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126748.56347862243!2d107.5731165!3d-6.9034443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e6398252477f%3A0x146a1f93d3e815b2!2sBandung%2C%20Bandung%20City%2C%20West%20Java!5e0!3m2!1sen!2sid!4v1710000000000!5m2!1sen!2sid" 
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer-utama">
+    <div class="wadah footer-konten">
+      <div class="footer-kiri">
+        <span class="footer-logo">Es Segar Nusantara UMKM</span>
+        <p class="footer-tagline">Kesegaran Alami Buah & Santan Murni — Dingin Manis Pelepas Dahaga!</p>
+      </div>
+      <div class="footer-kanan">
+        <p class="hak-cipta">&copy; 2021 Es Segar Nusantara UMKM. Hak Cipta Dilindungi.</p>
+        <p class="footer-keterangan">Dibuat dengan HTML, CSS, dan JavaScript Murni tanpa framework.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== TOMBOL WHATSAPP MELAYANG ==================== -->
+  <a id="tombol-wa-melayang" href="#" class="tombol-wa-melayang" aria-label="Chat WhatsApp Admin">
+    <div class="tooltip-wa">Haus? Chat & Pesan di sini!</div>
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 6L0 24l6.23-1.63c1.76.96 3.75 1.47 5.8 1.47h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-1.25-6.21-3.49-8.39zM12.06 21.84c-1.8 0-3.56-.48-5.11-1.4l-.37-.22-3.7.97.99-3.61-.24-.38a9.92 9.92 0 0 1-1.53-5.23c0-5.5 4.48-9.98 9.98-9.98 2.66 0 5.17 1.04 7.05 2.92a9.92 9.92 0 0 1 2.92 7.05c0 5.5-4.48 9.98-9.98 9.98zm5.47-7.48c-.3-.15-1.78-.88-2.06-.98-.28-.1-.48-.15-.68.15-.2.3-.78.98-.95 1.18-.18.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.18-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.52-.07-.15-.68-1.63-.93-2.24-.24-.58-.49-.5-.68-.51h-.58c-.2 0-.52.07-.8.38-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.22 3.07.15.2 2.1 3.2 5.09 4.49.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.78-.73 2.03-1.43.25-.7.25-1.31.18-1.43-.08-.12-.28-.2-.58-.35z"/>
+    </svg>
+  </a>
+
+  <!-- Script JavaScript Murni -->
+  <script src="script.js"></script>
+</body>
+</html>

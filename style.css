@@ -1,0 +1,837 @@
+/* ==========================================================================
+   STYLE.CSS - MINUMAN ES UMKM
+   Dibuat menggunakan CSS Murni tanpa framework
+   Responsif untuk HP (360px), Tablet, dan Laptop
+   ========================================================================== */
+
+/* 1. VARIABEL WARNA & UKURAN DI :ROOT */
+:root {
+  --warna-utama: #0284c7;       /* Biru Segar Es */
+  --warna-sekunder: #0d9488;  /* Hijau Teal Pandan */
+  --warna-aksen: #f59e0b;        /* Kuning Mangga / Nangka */
+  --warna-teks: #0f172a;         /* Teks Gelap Kontras */
+  --warna-teks-redup: #64748b;   /* Teks Sekunder */
+  --warna-latar: #f8fafc;         /* Putih Sejuk Bersih */
+  --warna-kartu: #ffffff;        /* Putih Kartu */
+  --warna-garis: #e2e8f0;        /* Garis Pemisah Halus */
+  --warna-wa: #25d366;           /* Hijau WhatsApp Resmi */
+  
+  --font-judul: 'Outfit', sans-serif;
+  --font-teks: 'Plus Jakarta Sans', sans-serif;
+
+  --transisi-cepat: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transisi-sedang: 0.3s ease;
+  --bayangan-kartu: 0 4px 12px rgba(2, 132, 199, 0.05);
+  --bayangan-hover: 0 12px 24px rgba(2, 132, 199, 0.12);
+  --radius-sudut: 14px;
+}
+
+/* 2. RESET DASAR */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-teks);
+  background-color: var(--warna-latar);
+  color: var(--warna-teks);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color var(--transisi-cepat);
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* WADAH UTAMA */
+.wadah {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* 3. HEADER & NAVIGASI */
+.header-utama {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--warna-garis);
+  height: 72px;
+  display: flex;
+  align-items: center;
+}
+
+.header-konten {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo-usaha {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-judul);
+  font-weight: 800;
+  font-size: 1.35rem;
+  color: var(--warna-utama);
+  white-space: nowrap;
+}
+
+.ikon-api {
+  font-size: 1.5rem;
+}
+
+.navigasi .daftar-menu {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.tautan-menu {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--warna-teks);
+  position: relative;
+  padding: 6px 0;
+}
+
+.tautan-menu:hover,
+.tautan-menu.aktif {
+  color: var(--warna-utama);
+}
+
+.tautan-menu::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--warna-utama);
+  transition: width var(--transisi-cepat);
+}
+
+.tautan-menu:hover::after,
+.tautan-menu.aktif::after {
+  width: 100%;
+}
+
+/* Tombol Hamburger HP */
+.tombol-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 32px;
+  height: 32px;
+  padding: 4px;
+  z-index: 102;
+}
+
+.tombol-hamburger span {
+  width: 100%;
+  height: 3px;
+  background-color: var(--warna-teks);
+  border-radius: 3px;
+  transition: var(--transisi-cepat);
+}
+
+.tombol-hamburger.aktif span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 6px);
+}
+.tombol-hamburger.aktif span:nth-child(2) {
+  opacity: 0;
+}
+.tombol-hamburger.aktif span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -6px);
+}
+
+/* 4. TOMBOL-TOMBOL UMUM */
+.tombol-primer {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: var(--warna-utama);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 12px 24px;
+  border-radius: 10px;
+  transition: background-color var(--transisi-cepat), transform var(--transisi-cepat);
+  box-shadow: 0 2px 6px rgba(2, 132, 199, 0.25);
+  white-space: nowrap;
+}
+
+.tombol-primer:hover {
+  background-color: #0369a1;
+  transform: translateY(-2px);
+}
+
+.tombol-sekunder {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #ffffff;
+  color: var(--warna-teks);
+  border: 1px solid var(--warna-garis);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 12px 24px;
+  border-radius: 10px;
+  transition: border-color var(--transisi-cepat), background-color var(--transisi-cepat);
+  white-space: nowrap;
+}
+
+.tombol-sekunder:hover {
+  border-color: var(--warna-utama);
+  color: var(--warna-utama);
+}
+
+/* 5. BAGIAN BERANDA (HERO) */
+.bagian-hero {
+  padding: 60px 0 70px 0;
+  background: radial-gradient(circle at 85% 20%, rgba(2, 132, 199, 0.08) 0%, transparent 60%),
+              radial-gradient(circle at 10% 80%, rgba(13, 148, 136, 0.06) 0%, transparent 50%);
+}
+
+.hero-konten {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 50px;
+}
+
+.sub-judul-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--warna-utama);
+  margin-bottom: 14px;
+}
+
+.titik-segar {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--warna-sekunder);
+}
+
+.hero-judul {
+  font-family: var(--font-judul);
+  font-size: clamp(2.2rem, 3.8vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: #0f172a;
+  margin-bottom: 20px;
+}
+
+.hero-deskripsi {
+  font-size: 1.1rem;
+  color: var(--warna-teks-redup);
+  margin-bottom: 30px;
+  max-width: 540px;
+}
+
+.hero-aksi {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+
+.ringkasan-poin {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-top: 24px;
+  border-top: 1px solid var(--warna-garis);
+}
+
+.poin-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.poin-angka {
+  font-family: var(--font-judul);
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--warna-utama);
+}
+
+.poin-label {
+  font-size: 0.82rem;
+  color: var(--warna-teks-redup);
+}
+
+.poin-pembagi {
+  width: 1px;
+  height: 36px;
+  background-color: var(--warna-garis);
+}
+
+.kartu-hero-gambar {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 16px 36px rgba(2, 132, 199, 0.14);
+  border: 4px solid #ffffff;
+}
+
+.hero-img-utama {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  transition: transform var(--transisi-sedang);
+}
+
+.kartu-hero-gambar:hover .hero-img-utama {
+  transform: scale(1.03);
+}
+
+.lencana-melayang {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 10px 18px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+/* 6. BAGIAN KEUNGGULAN */
+.bagian-keunggulan {
+  padding: 60px 0;
+  background-color: #ffffff;
+}
+
+.judul-bagian {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.judul-bagian h2 {
+  font-family: var(--font-judul);
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.judul-bagian p {
+  color: var(--warna-teks-redup);
+  font-size: 1rem;
+}
+
+.kisi-keunggulan {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.kartu-keunggulan {
+  background-color: var(--warna-latar);
+  padding: 30px;
+  border-radius: var(--radius-sudut);
+  border: 1px solid var(--warna-garis);
+}
+
+.ikon-keunggulan {
+  font-size: 2.2rem;
+  margin-bottom: 16px;
+}
+
+.kartu-keunggulan h3 {
+  font-family: var(--font-judul);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.kartu-keunggulan p {
+  color: var(--warna-teks-redup);
+  font-size: 0.92rem;
+}
+
+/* 7. BAGIAN KATALOG MENU ES */
+.bagian-produk {
+  padding: 70px 0;
+}
+
+/* ATURAN WAJIB: TATA LETAK RESPONSIF (3 LAPTOP, 2 TABLET, 1 HP) */
+.kisi-produk {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 KOLOM DI LAPTOP */
+  gap: 28px;
+}
+
+.kartu-produk {
+  background-color: var(--warna-kartu);
+  border-radius: var(--radius-sudut);
+  overflow: hidden;
+  border: 1px solid var(--warna-garis);
+  box-shadow: var(--bayangan-kartu);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transisi-cepat), box-shadow var(--transisi-cepat);
+}
+
+.kartu-produk:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--bayangan-hover);
+}
+
+.wadah-foto {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  background-color: #f1f5f9;
+}
+
+.wadah-foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transisi-sedang);
+}
+
+.kartu-produk:hover .wadah-foto img {
+  transform: scale(1.05);
+}
+
+.lencana-favorit {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: var(--warna-utama);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.konten-produk {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.header-produk {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.nama-produk {
+  font-family: var(--font-judul);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.berat-produk {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--warna-teks-redup);
+  white-space: nowrap;
+}
+
+.deskripsi-produk {
+  font-size: 0.88rem;
+  color: var(--warna-teks-redup);
+  line-height: 1.5;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.bawah-produk {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  border-top: 1px solid var(--warna-garis);
+}
+
+.harga-produk {
+  font-family: var(--font-judul);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--warna-utama);
+  font-variant-numeric: tabular-nums;
+}
+
+.tombol-pesan {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #10b981;
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: background-color var(--transisi-cepat);
+}
+
+.tombol-pesan:hover {
+  background-color: #059669;
+}
+
+/* 8. BAGIAN KONTAK & LOKASI */
+.bagian-kontak {
+  padding: 70px 0;
+  background-color: #ffffff;
+}
+
+.konten-kontak-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+}
+
+.kartu-info-kontak {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.item-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.ikon-info {
+  font-size: 1.6rem;
+  line-height: 1;
+  background-color: var(--warna-latar);
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid var(--warna-garis);
+}
+
+.item-info h4 {
+  font-family: var(--font-judul);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.item-info p {
+  color: var(--warna-teks-redup);
+  font-size: 0.92rem;
+}
+
+.tautan-peta {
+  display: inline-block;
+  margin-top: 6px;
+  color: var(--warna-utama);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.tautan-peta:hover {
+  text-decoration: underline;
+}
+
+.sosmed-links {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 6px;
+}
+
+.link-sosmed {
+  font-size: 0.9rem;
+  color: var(--warna-teks);
+}
+
+.link-sosmed:hover {
+  color: var(--warna-utama);
+}
+
+.kartu-peta {
+  border-radius: var(--radius-sudut);
+  overflow: hidden;
+  border: 1px solid var(--warna-garis);
+  min-height: 320px;
+}
+
+.wadah-peta {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+}
+
+/* 9. FOOTER */
+.footer-utama {
+  background-color: #0f172a;
+  color: #ffffff;
+  padding: 40px 0;
+}
+
+.footer-konten {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-logo {
+  font-family: var(--font-judul);
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.footer-tagline {
+  color: #94a3b8;
+  font-size: 0.88rem;
+  margin-top: 4px;
+}
+
+.hak-cipta {
+  font-size: 0.85rem;
+  color: #cbd5e1;
+}
+
+.footer-keterangan {
+  font-size: 0.78rem;
+  color: #64748b;
+  margin-top: 4px;
+}
+
+/* 10. TOMBOL WHATSAPP MELAYANG */
+.tombol-wa-melayang {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999;
+  background-color: var(--warna-wa);
+  color: #ffffff;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.4);
+  transition: transform var(--transisi-cepat), box-shadow var(--transisi-cepat);
+}
+
+.tombol-wa-melayang:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.6);
+}
+
+.tooltip-wa {
+  position: absolute;
+  right: 68px;
+  background-color: #0f172a;
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 6px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: opacity var(--transisi-cepat), transform var(--transisi-cepat);
+}
+
+.tombol-wa-melayang:hover .tooltip-wa {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ==========================================================================
+   11. ATURAN RESPONSIVE: TABLET & HP (360px)
+   ========================================================================== */
+
+/* LAYAR TABLET (Maksimal 992px) */
+@media (max-width: 992px) {
+  .hero-konten {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 36px;
+  }
+
+  .hero-deskripsi {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-aksi {
+    justify-content: center;
+  }
+
+  .ringkasan-poin {
+    justify-content: center;
+  }
+
+  .kartu-hero-gambar {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* 2 KOLOM DI TABLET */
+  .kisi-produk {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .kisi-keunggulan {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .konten-kontak-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* LAYAR HP & MOBILE (Maksimal 768px dan teruji di 360px) */
+@media (max-width: 768px) {
+  .tombol-hamburger {
+    display: flex;
+  }
+
+  .header-cta {
+    display: none;
+  }
+
+  .navigasi {
+    position: fixed;
+    top: 72px;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom: 2px solid var(--warna-utama);
+    padding: 20px 0;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    display: none;
+  }
+
+  .navigasi.aktif {
+    display: block;
+  }
+
+  .navigasi .daftar-menu {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .tautan-menu {
+    display: inline-block;
+    padding: 8px 16px;
+  }
+
+  /* 1 KOLOM DI HP (SESUAI ATURAN UTAMA LEBAR 360PX) */
+  .kisi-produk {
+    grid-template-columns: 1fr;
+  }
+
+  .kisi-keunggulan {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-judul {
+    font-size: 1.85rem;
+  }
+
+  .footer-konten {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* PENGUJIAN KHUSUS HP LEBAR KECIL (360px) */
+@media (max-width: 380px) {
+  .wadah {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .hero-judul {
+    font-size: 1.65rem;
+  }
+
+  .hero-aksi {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-aksi .tombol-primer,
+  .hero-aksi .tombol-sekunder {
+    width: 100%;
+  }
+
+  .bawah-produk {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .bawah-produk .tombol-pesan {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .tombol-wa-melayang {
+    bottom: 16px;
+    right: 16px;
+    width: 50px;
+    height: 50px;
+  }
+}
